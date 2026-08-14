@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AStockS 最值得投资股票筛选</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">全市场股票池 · 资金/价格/筹码多维评分</p>
+    <h1>如何选出最值得投资的股票</h1>
+    <p>基于逻辑图构建六层筛选模型，合成超大单、大单、中单、小单资金净流入并进行排序。</p>
+  </header>
+  <main>
+    <section class="flow" aria-label="筛选逻辑图">
+      <article><b>1 基础筛选层</b><span>市值、交易活跃、风险、行业、市场环境过滤</span></article>
+      <article><b>2 资金分析层</b><span>F/E/T/C/S：强度、效率、持续性、一致性、变化趋势</span></article>
+      <article><b>3 价格响应层</b><span>趋势、响应效率、动能、异 / 背离信号</span></article>
+      <article><b>4 流动性与筹码层</b><span>换手率、买卖盘口、筹码集中度、交换健康度</span></article>
+      <article><b>5 综合评分与排序</b><span>资金35% + 价格25% + 筹码20% + 市场20%</span></article>
+      <article><b>6 人工确认层</b><span>基本面、行业地位、催化因素、技术形态、风险控制</span></article>
+    </section>
+
+    <section class="panel">
+      <div>
+        <h2>TOP 股票排行</h2>
+        <p>可通过 POST /api/rank 传入接口返回的股票数组，字段见 docs/ft-tech-gateway-t6zl1n0p.md。</p>
+      </div>
+      <button id="refresh">刷新评分</button>
+    </section>
+
+    <section class="cards" id="cards" aria-live="polite"></section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
